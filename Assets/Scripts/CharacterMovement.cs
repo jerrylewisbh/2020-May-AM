@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+
+    public CharacterController controller;
+    public float speed;
+
     void Awake()
     {
         Debug.Log("Awake was called");
@@ -17,10 +21,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.Translate(transform.forward);
-        }
-
+        float verticalInput = Input.GetAxis("Vertical");
+        controller.SimpleMove(transform.forward * speed * verticalInput * Time.deltaTime);
     }
 }
