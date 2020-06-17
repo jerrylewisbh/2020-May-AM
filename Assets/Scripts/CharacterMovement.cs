@@ -12,10 +12,13 @@ public class CharacterMovement : MonoBehaviour
     public float turnSpeed = 50;
     private int score = 0;
 
+    private Animator animator;
+
     public Text scoreText;
 
     void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         Debug.Log("Awake was called");
     }
     // Start is called before the first frame update
@@ -30,8 +33,18 @@ public class CharacterMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         controller.SimpleMove(transform.forward * speed * verticalInput * Time.deltaTime);
 
-        float horizontalInput = Input.GetAxis("Horizontal");
+        if (verticalInput == 0)
+        {
+           
+            animator.SetBool("Walking", false);
+        }
+        else
+        {
+            animator.SetBool("Walking", true);
+        }
         
+        
+        float horizontalInput = Input.GetAxis("Horizontal");
         Vector3 rotation = new Vector3(0, horizontalInput * turnSpeed * Time.deltaTime ,0);
         transform.Rotate(rotation);
 
