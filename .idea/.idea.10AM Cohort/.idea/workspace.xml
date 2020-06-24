@@ -20,16 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf824078-65d7-41da-a994-ff930c014302" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Hand.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Hand.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Table.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/FIshParent.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/FIshParent.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Ch14_nonPBR@Walking 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Ch14_nonPBR@Walking 1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hand.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VRRig.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VRRig.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VR Hand Pack/ENSNSFT Characters/VR Hands/anim controllers/ESNASFT VR L Hands Tempest.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Hand Pack/ENSNSFT Characters/VR Hands/anim controllers/ESNASFT VR L Hands Tempest.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +44,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FishScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighlightObject.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,6 +60,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FishScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HighlighObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HighlightObject.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +110,7 @@
       <workItem from="1592240631327" duration="2073000" />
       <workItem from="1592413853933" duration="2800000" />
       <workItem from="1592846105639" duration="4173000" />
+      <workItem from="1593017062847" duration="6130000" />
     </task>
     <servers />
   </component>
@@ -129,10 +135,46 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="2517" height="375" key="GridCell.Tab.0.bottom" timestamp="1593017869122">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1593017869122" />
+    <state width="2517" height="375" key="GridCell.Tab.0.center" timestamp="1593017869121">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1593017869121" />
+    <state width="2517" height="375" key="GridCell.Tab.0.left" timestamp="1593017869120">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1593017869120" />
+    <state width="2517" height="375" key="GridCell.Tab.0.right" timestamp="1593017869122">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1593017869122" />
+    <state width="2517" height="375" key="GridCell.Tab.1.bottom" timestamp="1593017887287">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.1.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1593017887287" />
+    <state width="2517" height="375" key="GridCell.Tab.1.center" timestamp="1593017887287">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.1.center/0.0.2560.1040@0.0.2560.1040" timestamp="1593017887287" />
+    <state width="2517" height="375" key="GridCell.Tab.1.left" timestamp="1593017887287">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.1.left/0.0.2560.1040@0.0.2560.1040" timestamp="1593017887287" />
+    <state width="2517" height="375" key="GridCell.Tab.1.right" timestamp="1593017887287">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="375" key="GridCell.Tab.1.right/0.0.2560.1040@0.0.2560.1040" timestamp="1593017887287" />
     <state x="781" y="165" key="SettingsEditor" timestamp="1591635752725">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="781" y="165" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1591635752725" />
+    <state x="1078" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593019875500">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1078" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1593019875500" />
     <state x="936" y="240" key="run.anything.popup" timestamp="1591639066537">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
