@@ -20,16 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf824078-65d7-41da-a994-ff930c014302" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/FIshParent.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/FIshParent.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Ch14_nonPBR@Walking 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Ch14_nonPBR@Walking 1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VRRig.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VRRig.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VR Hand Pack/ENSNSFT Characters/VR Hands/anim controllers/ESNASFT VR L Hands Tempest.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Hand Pack/ENSNSFT Characters/VR Hands/anim controllers/ESNASFT VR L Hands Tempest.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +55,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FishScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Hand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HighlighObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HighlightObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hand.cs" />
       </list>
     </option>
   </component>
@@ -111,6 +107,7 @@
       <workItem from="1592413853933" duration="2800000" />
       <workItem from="1592846105639" duration="4173000" />
       <workItem from="1593017062847" duration="6130000" />
+      <workItem from="1593448109894" duration="6470000" />
     </task>
     <servers />
   </component>

@@ -22,10 +22,9 @@ public class Hand : MonoBehaviour
 
     [SerializeField] 
     private float simHandMoveSpeed = 20;
-    
-     
-
     private GameObject selectedObject = null;
+
+    private bool isGrabbing = false;
 
     public void Awake()
     {
@@ -52,7 +51,7 @@ public class Hand : MonoBehaviour
         float gripValue = Input.GetAxis(gripButtonAxis);
         bool isMouseButtonPressed = false;
 
-        if (Input.GetMouseButtonDown(mouseButton))
+        if (Input.GetMouseButton(mouseButton))
         {
             isMouseButtonPressed = true;
         }
@@ -61,10 +60,9 @@ public class Hand : MonoBehaviour
         {
             isMouseButtonPressed = false;
         }
-    
         
 
-        if (gripValue > 0 || isMouseButtonPressed)
+        if ((gripValue > 0 && !keyBoardAndMouseEnabled) || isMouseButtonPressed)
         {
             animator.SetBool("GripPressed", true);
         }
@@ -73,14 +71,20 @@ public class Hand : MonoBehaviour
             animator.SetBool("GripPressed", false);
         }
 
-        if (gripValue == 1 || isMouseButtonPressed)
+        if ((gripValue == 1 && !keyBoardAndMouseEnabled) || isMouseButtonPressed)
         {
-            Grab();
+            if (!isGrabbing)
+            {
+                Grab();
+            }
         }
 
-        if (gripValue == 0 || !isMouseButtonPressed)
+        if ((gripValue == 0 && !keyBoardAndMouseEnabled ) || !isMouseButtonPressed)
         {
-            Release();
+            if (isGrabbing)
+            {
+                Release();
+            }
         }
     }
 
@@ -112,6 +116,7 @@ public class Hand : MonoBehaviour
             selectedObject.transform.parent = this.transform;
             Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
             otherRigidbody.isKinematic = false;
+            isGrabbing = true;
         }
     }
 
@@ -123,16 +128,25 @@ public class Hand : MonoBehaviour
 
             Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
             otherRigidbody.isKinematic = true;
+            isGrabbing = false;
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        selectedObject = other.gameObject;
+        if (!isGrabbing)
+        {
+            selectedObject = other.gameObject;
+        }
+
     }
 
     private void OnCollisionExit(Collision other)
     {
-        selectedObject = null;
+        if (!isGrabbing)
+        {
+            selectedObject = null;
+        }
+
     }
 }
