@@ -2,28 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun : Interactible
 {
 
     public GameObject Bullet;
     public Transform spawnPoint;
     public float force = 200;
-    
-    // Start is called before the first frame update
-    void Start()
+
+    public override void Interact()
     {
-        
+        Debug.Log("Shot");
+        Shot();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Shot();
-        }
-        
-    }
 
     private void Shot()
     {

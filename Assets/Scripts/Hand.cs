@@ -20,11 +20,18 @@ public class Hand : MonoBehaviour
     [Tooltip("is keyboard and mouse interaction available?")]
     private bool keyBoardAndMouseEnabled = false;
 
+
+    [SerializeField] 
+    private float throwForce = 10;
+    
     [SerializeField] 
     private float simHandMoveSpeed = 20;
     private GameObject selectedObject = null;
 
     private bool isGrabbing = false;
+
+    private Vector3 originalPosition;
+    private Vector3 originalRotation;
 
     public void Awake()
     {
@@ -46,6 +53,10 @@ public class Hand : MonoBehaviour
 
     public void Update()
     {
+        originalPosition = transform.position;
+        originalRotation = transform.rotation.eulerAngles;
+        
+        
         MoveSimHand();
         
         float gripValue = Input.GetAxis(gripButtonAxis);
@@ -86,6 +97,22 @@ public class Hand : MonoBehaviour
                 Release();
             }
         }
+
+
+        if (isGrabbing)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Interactible interactible =  selectedObject.GetComponent<Interactible>();
+
+                if (interactible != null)
+                {
+                    interactible.Interact();
+                }
+            }
+        }
+        
+        
     }
 
     private void MoveSimHand()
@@ -115,7 +142,7 @@ public class Hand : MonoBehaviour
             Debug.Log("Grab " + selectedObject.name);
             selectedObject.transform.parent = this.transform;
             Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
-            otherRigidbody.isKinematic = false;
+            otherRigidbody.isKinematic = true;
             isGrabbing = true;
         }
     }
@@ -127,8 +154,16 @@ public class Hand : MonoBehaviour
             selectedObject.transform.parent = null;
 
             Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
-            otherRigidbody.isKinematic = true;
+            otherRigidbody.isKinematic = false;
+
+            Vector3 velocity = (transform.position - originalPosition) / Time.deltaTime;
+            Vector3 angularVelocity = (transform.rotation.eulerAngles - originalRotation) / Time.deltaTime;
+
+            otherRigidbody.velocity = velocity * throwForce;
+            otherRigidbody.angularVelocity = angularVelocity * throwForce;
+                
             isGrabbing = false;
+            selectedObject = null;
         }
     }
 
@@ -143,10 +178,10 @@ public class Hand : MonoBehaviour
 
     private void OnCollisionExit(Collision other)
     {
+        
         if (!isGrabbing)
         {
-            selectedObject = null;
+            selectedObject = other.gameObject;
         }
-
     }
 }

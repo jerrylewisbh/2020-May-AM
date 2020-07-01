@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf824078-65d7-41da-a994-ff930c014302" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +39,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadScenes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/TapToInstantiate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FishScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gun.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,14 +54,17 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Collectible.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadScenes.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FishScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HighlighObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HighlightObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactible.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/TapToInstantiate.cs" />
       </list>
     </option>
   </component>
@@ -107,7 +113,8 @@
       <workItem from="1592413853933" duration="2800000" />
       <workItem from="1592846105639" duration="4173000" />
       <workItem from="1593017062847" duration="6130000" />
-      <workItem from="1593448109894" duration="6470000" />
+      <workItem from="1593448109894" duration="7826000" />
+      <workItem from="1593621071418" duration="5816000" />
     </task>
     <servers />
   </component>
