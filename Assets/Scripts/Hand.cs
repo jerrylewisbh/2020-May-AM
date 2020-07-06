@@ -15,17 +15,14 @@ public class Hand : MonoBehaviour
     private Animator animator;
     private string gripButtonAxis;
     private int mouseButton;
-    
-    [SerializeField]
-    [Tooltip("is keyboard and mouse interaction available?")]
+
+    [SerializeField] [Tooltip("is keyboard and mouse interaction available?")]
     private bool keyBoardAndMouseEnabled = false;
 
 
-    [SerializeField] 
-    private float throwForce = 10;
-    
-    [SerializeField] 
-    private float simHandMoveSpeed = 20;
+    [SerializeField] private float throwForce = 10;
+
+    [SerializeField] private float simHandMoveSpeed = 20;
     private GameObject selectedObject = null;
 
     private bool isGrabbing = false;
@@ -35,7 +32,6 @@ public class Hand : MonoBehaviour
 
     public void Awake()
     {
-        
         animator = GetComponentInChildren<Animator>();
 
         if (handness == Handness.Right)
@@ -47,7 +43,6 @@ public class Hand : MonoBehaviour
         {
             gripButtonAxis = "LeftGrip";
             mouseButton = 0;
-
         }
     }
 
@@ -55,10 +50,10 @@ public class Hand : MonoBehaviour
     {
         originalPosition = transform.position;
         originalRotation = transform.rotation.eulerAngles;
-        
-        
+
+
         MoveSimHand();
-        
+
         float gripValue = Input.GetAxis(gripButtonAxis);
         bool isMouseButtonPressed = false;
 
@@ -71,7 +66,7 @@ public class Hand : MonoBehaviour
         {
             isMouseButtonPressed = false;
         }
-        
+
 
         if ((gripValue > 0 && !keyBoardAndMouseEnabled) || isMouseButtonPressed)
         {
@@ -90,7 +85,7 @@ public class Hand : MonoBehaviour
             }
         }
 
-        if ((gripValue == 0 && !keyBoardAndMouseEnabled ) || !isMouseButtonPressed)
+        if ((gripValue == 0 && !keyBoardAndMouseEnabled) || !isMouseButtonPressed)
         {
             if (isGrabbing)
             {
@@ -103,7 +98,7 @@ public class Hand : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Interactible interactible =  selectedObject.GetComponent<Interactible>();
+                Interactible interactible = selectedObject.GetComponent<Interactible>();
 
                 if (interactible != null)
                 {
@@ -111,28 +106,32 @@ public class Hand : MonoBehaviour
                 }
             }
         }
-        
-        
     }
 
     private void MoveSimHand()
     {
         if (keyBoardAndMouseEnabled)
         {
-            if(Input.GetKey(KeyCode.I)){
+            if (Input.GetKey(KeyCode.I))
+            {
                 transform.Translate(Vector3.forward * simHandMoveSpeed * Time.deltaTime);
             }
-            if(Input.GetKey(KeyCode.K)){
+
+            if (Input.GetKey(KeyCode.K))
+            {
                 transform.Translate(Vector3.back * simHandMoveSpeed * Time.deltaTime);
             }
-            if(Input.GetKey(KeyCode.L)){
+
+            if (Input.GetKey(KeyCode.L))
+            {
                 transform.Translate(Vector3.right * simHandMoveSpeed * Time.deltaTime);
             }
-            if(Input.GetKey(KeyCode.J)){
+
+            if (Input.GetKey(KeyCode.J))
+            {
                 transform.Translate(Vector3.left * simHandMoveSpeed * Time.deltaTime);
             }
         }
-
     }
 
     private void Grab()
@@ -161,7 +160,7 @@ public class Hand : MonoBehaviour
 
             otherRigidbody.velocity = velocity * throwForce;
             otherRigidbody.angularVelocity = angularVelocity * throwForce;
-                
+
             isGrabbing = false;
             selectedObject = null;
         }
@@ -173,12 +172,10 @@ public class Hand : MonoBehaviour
         {
             selectedObject = other.gameObject;
         }
-
     }
 
     private void OnCollisionExit(Collision other)
     {
-        
         if (!isGrabbing)
         {
             selectedObject = other.gameObject;

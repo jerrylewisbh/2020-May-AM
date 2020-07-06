@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ArFoundation.unity
+    guid: 2cbca68603d10aa4cb6ec16667773d63
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: f5d4c748383a65f4c96cae31e26a2b3d
   - enabled: 1
@@ -14,4 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARMobile.unity
     guid: d30ba2444e1df2c4ebc6cc932f2de143
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 27909f82d86447d40856ba6fee2c3501,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 83e7074f839f423418f42c5553fe053d,
+      type: 2}
