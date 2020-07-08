@@ -10,6 +10,7 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.xr.arcore": "2.1.8",
     "com.unity.xr.arfoundation": "2.1.8",
+    "com.unity.xr.interaction.toolkit": "0.9.4-preview",
     "com.unity.xr.legacyinputhelpers": "2.1.4",
     "com.unity.xr.management": "3.2.13",
     "com.unity.xr.oculus.standalone": "2.38.4",
