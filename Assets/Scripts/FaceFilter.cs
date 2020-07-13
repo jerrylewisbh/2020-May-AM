@@ -26,12 +26,11 @@ public class FaceFilter : MonoBehaviour
             currentIndex = 0;
         }
 
-
         foreach (ARFace face in faceManager.trackables)
         {
             face.GetComponent<MeshRenderer>().material = faceFilters[currentIndex];
         }
-
+        
     }
     
 }
