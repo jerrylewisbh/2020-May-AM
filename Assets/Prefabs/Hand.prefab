@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 914697261273860809}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handness: 1
   keyBoardAndMouseEnabled: 0
+  throwForce: 10
   simHandMoveSpeed: 20
 --- !u!54 &5273551342740454734
 Rigidbody:
@@ -110,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f847d01fbe9f55e4ca525f5703c66ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDistance: 100
+  teleportableColor: {r: 0, g: 0, b: 0, a: 0}
+  notTeleportableColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &5273551341768069649
 PrefabInstance:
   m_ObjectHideFlags: 0
