@@ -20,10 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf824078-65d7-41da-a994-ff930c014302" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.10AM Cohort/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PushButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PushButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARMobile.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARMobile.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,23 +39,26 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lever.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Agent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/XRayable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PaintBrushTip.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Invisible.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PaintBrush.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Agent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.arfoundation@2.1.8/Runtime/AR/ARFaceManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fleshlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PushButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactible.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PaintBrushTip.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/TapToInstantiate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ButtonTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FishScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadScenes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FaceFilter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LeverPull.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PaintBrush.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gun.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/RaySelection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Hand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/TapToInstantiate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactible.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FaceFilter.cs" />
@@ -82,6 +88,10 @@
         <option value="$PROJECT_DIR$/Assets/ButtonTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/PushButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Agent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Invisible.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/XRayable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GrabbableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hand.cs" />
       </list>
     </option>
   </component>
@@ -138,7 +148,10 @@
       <workItem from="1594837234808" duration="1287000" />
       <workItem from="1595265118794" duration="5292000" />
       <workItem from="1595277607129" duration="605000" />
-      <workItem from="1595437654407" duration="2203000" />
+      <workItem from="1595437654407" duration="2802000" />
+      <workItem from="1595624630443" duration="990000" />
+      <workItem from="1595629286935" duration="1235000" />
+      <workItem from="1595871872452" duration="3408000" />
     </task>
     <servers />
   </component>

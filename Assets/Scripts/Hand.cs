@@ -143,6 +143,9 @@ public class Hand : MonoBehaviour
             Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
             otherRigidbody.isKinematic = true;
             isGrabbing = true;
+
+            selectedObject.GetComponent<GrabbableObject>().isBeingGrabbed = true;
+
         }
     }
 
@@ -162,6 +165,7 @@ public class Hand : MonoBehaviour
             otherRigidbody.angularVelocity = angularVelocity * throwForce;
 
             isGrabbing = false;
+            selectedObject.GetComponent<GrabbableObject>().isBeingGrabbed = false;
             selectedObject = null;
         }
     }
@@ -170,7 +174,12 @@ public class Hand : MonoBehaviour
     {
         if (!isGrabbing)
         {
-            selectedObject = other.gameObject;
+            GrabbableObject grabbale = other.gameObject.GetComponent<GrabbableObject>();
+
+            if (grabbale != null)
+            {
+                selectedObject = other.gameObject;
+            }
         }
     }
 
