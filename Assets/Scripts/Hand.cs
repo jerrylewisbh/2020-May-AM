@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -81,7 +81,8 @@ public class Hand : MonoBehaviour
         {
             if (!isGrabbing)
             {
-                Grab();
+                //Grab();
+                AdvancedGrab();
             }
         }
 
@@ -89,7 +90,8 @@ public class Hand : MonoBehaviour
         {
             if (isGrabbing)
             {
-                Release();
+                //Release();
+                AdvancedRelease();
             }
         }
 
@@ -141,13 +143,46 @@ public class Hand : MonoBehaviour
             Debug.Log("Grab " + selectedObject.name);
             selectedObject.transform.parent = this.transform;
             Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
-            otherRigidbody.isKinematic = true;
+           // otherRigidbody.isKinematic = true;
             isGrabbing = true;
 
             selectedObject.GetComponent<GrabbableObject>().isBeingGrabbed = true;
-
         }
     }
+
+    private void AdvancedGrab()
+    {
+        if (selectedObject != null)
+        {
+            Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
+            //otherRigidbody.isKinematic = true;
+
+            FixedJoint joint = gameObject.AddComponent<FixedJoint>();
+            joint.connectedBody = otherRigidbody;
+
+            joint.breakForce = float.MaxValue;
+            joint.breakTorque = float.MaxValue;
+            
+            isGrabbing = true;
+            selectedObject.GetComponent<GrabbableObject>().isBeingGrabbed = true;
+        }
+    }
+
+    private void AdvancedRelease()
+    {
+        if (selectedObject != null)
+        {
+            Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
+            //otherRigidbody.isKinematic = false;
+
+            FixedJoint joint = GetComponent<FixedJoint>();
+            Destroy(joint);
+
+            ThrowRigidBody(otherRigidbody);
+            SetNotGrabbing();
+        }
+    }
+
 
     private void Release()
     {
@@ -158,18 +193,29 @@ public class Hand : MonoBehaviour
             Rigidbody otherRigidbody = selectedObject.GetComponent<Rigidbody>();
             otherRigidbody.isKinematic = false;
 
-            Vector3 velocity = (transform.position - originalPosition) / Time.deltaTime;
-            Vector3 angularVelocity = (transform.rotation.eulerAngles - originalRotation) / Time.deltaTime;
+            ThrowRigidBody(otherRigidbody);
+            SetNotGrabbing();
 
-            otherRigidbody.velocity = velocity * throwForce;
-            otherRigidbody.angularVelocity = angularVelocity * throwForce;
-
-            isGrabbing = false;
-            selectedObject.GetComponent<GrabbableObject>().isBeingGrabbed = false;
-            selectedObject = null;
         }
     }
 
+
+    private void ThrowRigidBody(Rigidbody otherRigidbody)
+    {
+        Vector3 velocity = (transform.position - originalPosition) / Time.deltaTime;
+        Vector3 angularVelocity = (transform.rotation.eulerAngles - originalRotation) / Time.deltaTime;
+
+        otherRigidbody.velocity = velocity * throwForce;
+        otherRigidbody.angularVelocity = angularVelocity * throwForce;
+    }
+
+    private void SetNotGrabbing()
+    {
+        isGrabbing = false;
+        selectedObject.GetComponent<GrabbableObject>().isBeingGrabbed = false;
+        selectedObject = null;
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (!isGrabbing)
